@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3615316847463001039}
   - component: {fileID: 5257240116093948202}
   - component: {fileID: 4734915948670553373}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BrickTile
   m_TagString: Environment
   m_Icon: {fileID: 0}

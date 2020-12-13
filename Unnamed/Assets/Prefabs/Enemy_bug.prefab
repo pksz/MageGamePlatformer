@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2adbbe38b62e01e479a18877b42e9104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthpoints: 100
+  healthpoints: 50
 --- !u!114 &-4039996146288471547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,6 +151,6 @@ MonoBehaviour:
   enemy: {fileID: 7479026070256971570}
   playerPosition: {fileID: 0}
   attackrange: 1
-  aggroRange: 5
+  aggroRange: 7
   chaseSpeed: 4
   damageToPlayer: 10

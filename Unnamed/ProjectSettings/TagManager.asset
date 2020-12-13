@@ -16,8 +16,8 @@ TagManager:
   - 
   - 
   - environment top
-  - 
-  - 
+  - ground
+  - background
   - 
   - 
   - 
@@ -40,6 +40,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: background
+    uniqueID: 1711803509
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: foreground
+    uniqueID: 1415648599
     locked: 0

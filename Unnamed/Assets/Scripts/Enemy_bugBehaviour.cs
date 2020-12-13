@@ -13,15 +13,14 @@ public class Enemy_bugBehaviour : MonoBehaviour
     public  float chaseSpeed=3f;
     public int damageToPlayer=10;
     private Rigidbody2D rb2d;
-    private Vector3 startingPosition;
-    private Vector3 randomDirection;
+  
     //public Animation bugExplode;
 
     void Start()
     {
         rb2d = gameObject.GetComponent<Rigidbody2D>();
-        startingPosition = transform.position;                                                                                                 //stores the initial position of the enemy
-        randomDirection = new Vector3(UnityEngine.Random.Range(1f, -1f),1).normalized;                  //random movement threshhold
+       
+
     }
 
     // Update is called once per frame
@@ -30,11 +29,11 @@ public class Enemy_bugBehaviour : MonoBehaviour
         float distToPlayer = Vector2.Distance(transform.position, playerPosition.position);
 
         // chase the player
-        if ((distToPlayer < aggroRange)&& distToPlayer<attackrange)
+        if ((distToPlayer <= aggroRange)&& distToPlayer<=attackrange)
         {
             attack(damageToPlayer);
         }
-        else if (distToPlayer < aggroRange)
+        else if (distToPlayer <= aggroRange)
         {
 
             chasePlayer();
@@ -58,21 +57,21 @@ public class Enemy_bugBehaviour : MonoBehaviour
 
     private void chasePlayer()
     {
-        if (transform.position.x < playerPosition.position.x)
-        {
-            attack(damageToPlayer);
-        }
+   
             //enemy is to the left of the player(probably will never run)
-        else if (transform.position.x < playerPosition.position.x)
+        if (transform.position.x <= playerPosition.position.x)
         {
             rb2d.velocity = new Vector2(chaseSpeed, 0);
-            transform.localScale = new Vector2(-.2f, .2f);
+            transform.localRotation = Quaternion.Euler(0, 180, 0);
+            
+           
         }
         //enemy is right of the player
-        else 
+        else if (transform.position.x > playerPosition.position.x)
         {
             rb2d.velocity = new Vector2(-chaseSpeed, 0);
-            transform.localScale = new Vector2(.2f, .2f);
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
+            
         }
     }
 

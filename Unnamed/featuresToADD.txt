@@ -1,0 +1,8 @@
+-Ability to pause and quit
+-weapon switching
+-destroy animations and sounds
+-shield downtime ui
+-enemy healthbars
+-more environment sprites
+-more enemies(low priority)
+-shift boost

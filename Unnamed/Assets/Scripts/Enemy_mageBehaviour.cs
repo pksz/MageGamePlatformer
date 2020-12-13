@@ -24,40 +24,38 @@ public class Enemy_mageBehaviour : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {   
-        if (!characterController2D.isalive)
+    {
+        if (characterController2D.isalive)
         {
-            gameObject.SetActive(false);
-        }
-        float distToPlayer = transform.position.x - playerPosition.position.x;
-        float attckdistance = Vector2.Distance(transform.position, playerPosition.position);
-        
-
-        // look at the player
-        if (distToPlayer <= 0f && faceleft)
-        {
-            flipMage();
-        }
-        if (distToPlayer >= 0f && !faceleft)
-        {
-            flipMage();
-        }
-        ///reducing time b/wshots
-
-        if (timeBtwShots > 0)
-        {
-            timeBtwShots -= Time.deltaTime;
-        }
-        ///
-
-        //attack range
-        if (attckdistance < aggroRange && timeBtwShots<=0)
-        {
-            attackPlayer();
-            
-        }
+            float distToPlayer = transform.position.x - playerPosition.position.x;
+            float attckdistance = Vector2.Distance(transform.position, playerPosition.position);
 
 
+            // look at the player
+            if (distToPlayer <= 0f && faceleft)
+            {
+                flipMage();
+            }
+            if (distToPlayer >= 0f && !faceleft)
+            {
+                flipMage();
+            }
+            ///reducing time b/wshots
+
+            if (timeBtwShots > 0)
+            {
+                timeBtwShots -= Time.deltaTime;
+            }
+            ///
+
+            //attack range
+            if (attckdistance < aggroRange && timeBtwShots <= 0)
+            {
+                attackPlayer();
+
+            }
+
+        }
     }
 
  /// <summary>
