@@ -14,18 +14,18 @@ public class Enemy_mageBehaviour : MonoBehaviour
     float timeBtwShots = 0f;
     private Rigidbody2D rb2d;
     bool faceleft = true;
-
+    bool isliving;
 
     void Start()
     {
         rb2d = gameObject.GetComponent<Rigidbody2D>();
-                                                                                                                                   
+        isliving = true;                                                                                                                       
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (characterController2D.isalive)
+        if (characterController2D.isalive && isliving==true)
         {
             float distToPlayer = transform.position.x - playerPosition.position.x;
             float attckdistance = Vector2.Distance(transform.position, playerPosition.position);
