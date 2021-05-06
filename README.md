@@ -1,2 +1,2 @@
 # MageGamePlatformer
-used in college project
+ a 2d platformer shoooter where player shoots fireballs
