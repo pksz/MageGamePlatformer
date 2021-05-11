@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Enemy_bugBehaviour : MonoBehaviour
 {
+    public GameObject deatheffect;
     public characterController2D characterController2D;
     public Enemy enemy;
     public Transform playerPosition;
@@ -13,41 +14,49 @@ public class Enemy_bugBehaviour : MonoBehaviour
     public  float chaseSpeed=3f;
     public int damageToPlayer=10;
     private Rigidbody2D rb2d;
-  
-    //public Animation bugExplode;
+    bool isalive;
+    
 
     void Start()
     {
         rb2d = gameObject.GetComponent<Rigidbody2D>();
-       
 
+        isalive = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        float distToPlayer = Vector2.Distance(transform.position, playerPosition.position);
-
-        // chase the player
-        if ((distToPlayer <= aggroRange)&& distToPlayer<=attackrange)
+        if (isalive)
         {
-            attack(damageToPlayer);
+            if (enemy.healthpoints <= 0)
+            {
+                Instantiate(deatheffect, transform.position, transform.rotation);
+                Destroy(gameObject);
+            }
+            float distToPlayer = Vector2.Distance(transform.position, playerPosition.position);
+
+            // chase the player
+            if ((distToPlayer <= aggroRange) && distToPlayer <= attackrange)
+            {
+                attack(damageToPlayer);
+            }
+            else if (distToPlayer <= aggroRange)
+            {
+
+                chasePlayer();
+
+            }
+
+            else
+            {                                                                                                                           //stop chasing player
+
+
+
+                stopChasingPlayer();
+
+            }
         }
-        else if (distToPlayer <= aggroRange)
-        {
-
-            chasePlayer();
-
-        }
-      
-      else  {                                                                                                                           //stop chasing player
-                                                                                
-      
-
-            stopChasingPlayer();
-
-        }
-        
     }
 
     private void stopChasingPlayer()
@@ -79,9 +88,10 @@ public class Enemy_bugBehaviour : MonoBehaviour
     {
         rb2d.velocity = Vector2.zero;
         characterController2D.damage(damage);
+        Instantiate(deatheffect, transform.position, transform.rotation);
+        isalive = false;
+        Destroy(gameObject);
         
-        enemy.die();
-        //bugExplode.Play();
     }
 
   

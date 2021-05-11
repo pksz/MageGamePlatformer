@@ -147,10 +147,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d17072a829c99c74695ea0c11edd6a78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deatheffect: {fileID: 1474445119824877041, guid: 6fc12a531d92ad64f9316b25a27cb341,
+    type: 3}
   characterController2D: {fileID: 0}
   enemy: {fileID: 7479026070256971570}
   playerPosition: {fileID: 0}
   attackrange: 1
-  aggroRange: 7
+  aggroRange: 10
   chaseSpeed: 4
-  damageToPlayer: 10
+  damageToPlayer: 5

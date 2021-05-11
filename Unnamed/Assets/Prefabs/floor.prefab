@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3550090312330342870}
   - component: {fileID: 3550090312330342857}
   - component: {fileID: 3550090312330342871}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: floor
   m_TagString: Environment
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
+  m_DrawMode: 2
   m_Size: {x: 50.008892, y: 28.130001}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
@@ -102,7 +102,7 @@ BoxCollider2D:
     oldSize: {x: 50.008892, y: 28.130001}
     newSize: {x: 50.008892, y: 28.130001}
     adaptiveTilingThreshold: 0.5
-    drawMode: 0
+    drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2

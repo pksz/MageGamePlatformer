@@ -15,7 +15,7 @@ public class characterController2D : MonoBehaviour
     float movement;                                                                   //stores horizontal movement state of player
     bool isright = true;                                                                                    //facing right at start
     public int healthMax = 100;                                                                 //max health
-    int healthpoints;                                                                               //ehp
+     public int healthpoints;                                                                               //ehp
     public static bool isalive;                                
     public GameObject gameOverUI;                                                                       //triggers when game is over
     public float shieldDownTime = 10f;                                                                      //coolsown on shield
@@ -84,7 +84,10 @@ public class characterController2D : MonoBehaviour
         ////sets the current hp(very intensive)
 
         healthbar.setHealth(healthpoints);
-
+        if (healthpoints > healthMax)
+        {
+            healthpoints = healthMax;
+        }
         
     }
 

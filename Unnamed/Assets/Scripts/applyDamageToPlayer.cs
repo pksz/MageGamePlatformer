@@ -8,9 +8,10 @@ public class applyDamageToPlayer : MonoBehaviour
     
     private void OnTriggerStay2D(Collider2D collision)
     {
-
+        
         characterController2D cc2d = collision.GetComponent<characterController2D>();
-        if (cc2d != null && collision.CompareTag("Player"))
+        
+         if (cc2d != null && collision.CompareTag("Player"))
         {
 
             cc2d.damage(damage);

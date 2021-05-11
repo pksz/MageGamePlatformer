@@ -153,27 +153,27 @@ public class Boss : MonoBehaviour
 
         
         //do the ray attacks
-        if(timeBtwAttacks<0  && weaponTwoUsed ==true)
+        if(timeBtwAttacks<0  && weaponTwoUsed ==false)
         {
             spawnRays.shootRay();
-            timeBtwAttacks = attackCooldownOne;
-            weaponUseCount++;
-            weaponTwoUsed = false;
+            timeBtwAttacks = attackCooldownOne+10f;
+            weaponUseCount=0;
+            weaponTwoUsed = true;
         }
 
 
 
 
-        //shoot barrage 
-      //  if (timeBtwAttacks < 0)
-     //   {
-      //      bossAttackThree.shootBarrage();
-      //      timeBtwAttacks = attackCooldownOne;
-      //      weaponUseCount++;
-            //weaponTwoUsed = true;
-            //
+          //shoot barrage 
+       else if (timeBtwAttacks < 0)
+       {
+           bossAttackThree.shootBarrage();
+           timeBtwAttacks = attackCooldownOne;
+           weaponUseCount++;
+           
+            
 
-       // }
+        }
 
     }
 

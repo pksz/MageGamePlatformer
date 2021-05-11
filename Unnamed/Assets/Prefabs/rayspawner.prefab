@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273071166658496336}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.124, y: -0.82, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
@@ -43,5 +43,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11e19ef94e43fc54687fc52510c033ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Raysprite: {fileID: 4418999251138967514, guid: a49845939db9182449d4fc68b3d0d685,
-    type: 3}
+  Raysprite:
+  - {fileID: 4418999251138967514, guid: a49845939db9182449d4fc68b3d0d685, type: 3}
+  - {fileID: 4418999251138967514, guid: a49845939db9182449d4fc68b3d0d685, type: 3}
+  - {fileID: 4418999251138967514, guid: a49845939db9182449d4fc68b3d0d685, type: 3}
+  - {fileID: 4418999251138967514, guid: a49845939db9182449d4fc68b3d0d685, type: 3}
+  - {fileID: 4418999251138967514, guid: a49845939db9182449d4fc68b3d0d685, type: 3}
+  - {fileID: 4418999251138967514, guid: a49845939db9182449d4fc68b3d0d685, type: 3}
+  - {fileID: 4418999251138967514, guid: a49845939db9182449d4fc68b3d0d685, type: 3}
+  - {fileID: 4418999251138967514, guid: a49845939db9182449d4fc68b3d0d685, type: 3}
+  - {fileID: 4418999251138967514, guid: a49845939db9182449d4fc68b3d0d685, type: 3}
+  - {fileID: 4418999251138967514, guid: a49845939db9182449d4fc68b3d0d685, type: 3}
+  - {fileID: 4418999251138967514, guid: a49845939db9182449d4fc68b3d0d685, type: 3}
+  - {fileID: 4418999251138967514, guid: a49845939db9182449d4fc68b3d0d685, type: 3}
+  offset: 5

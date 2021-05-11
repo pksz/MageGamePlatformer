@@ -97,7 +97,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 2.4862018
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -122,7 +122,7 @@ MonoBehaviour:
   spellVelocity: 10
   damage: 40
   spellBody: {fileID: 3618867335000131895}
-  destroyTime: 2
+  destroyTime: 5
 --- !u!60 &8122086341409007139
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -156,8 +156,8 @@ PolygonCollider2D:
       - {x: 0.011187144, y: -0.049042553}
       - {x: 0.03367709, y: -0.15951903}
       - {x: 0.11537397, y: -0.2854899}
-      - {x: 0.17744672, y: -0.34395856}
-      - {x: 0.15771995, y: -0.35045877}
+      - {x: 0.11129988, y: -0.28488567}
+      - {x: 0.04668785, y: -0.29374796}
       - {x: -0.03885922, y: -0.25444332}
       - {x: -0.10899004, y: -0.1864508}
       - {x: -0.16358738, y: -0.08420348}

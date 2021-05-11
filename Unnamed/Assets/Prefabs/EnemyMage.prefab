@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 2387622658316302436}
   - component: {fileID: 1621566731}
   - component: {fileID: 1621566734}
+  - component: {fileID: 1838037022968753258}
   m_Layer: 0
   m_Name: EnemyMage
   m_TagString: Enemy
@@ -175,6 +176,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41f35a2e6289cb74b87223b6c8e7378f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 1621566734}
+  deatheffect: {fileID: 1474445119824877041, guid: 6fc12a531d92ad64f9316b25a27cb341,
+    type: 3}
+  animator: {fileID: 1838037022968753258}
   playerPosition: {fileID: 0}
   aggroRange: 10
   spellOrigin: {fileID: 528645358}
@@ -194,3 +199,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthpoints: 100
+--- !u!95 &1838037022968753258
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2387622658316302438}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c1e15a6a695d05242ad35813f418cbb6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
